@@ -1,0 +1,89 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-image: url('codice-stellare');
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 50px;
+    color: #04c1c8;
+    margin: 0;
+}
+
+.sottotitolo {
+    font-size: 24px;
+    color: #CA0CF0;
+    margin-top: 5px;
+}
+
+/* Sezione principale con layout orizzontale */
+.section-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Singola sezione */
+.section {
+    background-color: #353B3B;
+    color: white;
+    padding: 20px;
+    width: 600px; /* Larghezza fissa per affiancarle */
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Link e stile tabella */
+a {
+    color: #46E0E6;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #CA0CF0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #46E0E6;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+th {
+    color: #CA0CF0;
+    font-size: 20px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #353B3B;
+}
