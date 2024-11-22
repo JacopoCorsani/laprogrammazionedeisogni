@@ -30,6 +30,12 @@ header h1 {
     text-align: center;
 }
 
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 30px;
+    }
+}
+
 .sottotitolo {
     font-size: 24px;
     color: #CA0CF0;
