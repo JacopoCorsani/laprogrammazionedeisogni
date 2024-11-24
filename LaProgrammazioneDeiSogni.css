@@ -94,7 +94,35 @@ th {
     padding: 20px;
     background-color: #353B3B;
 }
+
 h2 {
     font-family: 'Concert One', sans-serif;
-    font-size: 30px;
+    font-size: 26px;
+}
+
+.code-section {
+    color: yellow;
+    background-color: #312d2d;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+}
+
+.code-section code {
+    display: block;
+    background-color: #242121;
+    border-left: 5px solid blue;
+    padding: 10px;
+    margin: 10px 0;
+    overflow-x: auto;
+    white-space: pre; /* Mantiene il formato originale del codice */
+}
+
+.comment {
+    color: green; /* Colore per i commenti */
 }

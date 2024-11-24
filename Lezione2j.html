@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="LaProgrammazioneDeiSogni.css">
+    <title>Lezione 2: Introduzione a CSS 🎨💅</title>
+</head>
+<body>
+
+    <header>
+        <h1>Lezione 2</h1>
+        <p class="sottotitolo">Introduzione a CSS 🎨💅</p> <!--Aggiungi...-->
+    </header>
+
+    <main>
+        <div class="section-container">
+        <div class="section" style="width: 100%;">
+            <h2 style="font-size: 40px;">Argomenti della lezione</h2>
+            <ul style="font-size: 16px; text-align: justify;">
+                <li>Introduzione alle immagini cliccabili</li>
+                <li>📄 Introduzione a CSS nelle tre modalità possibili:</li>
+                    <ul>
+                        <li>🖌️ Inline CSS</li>
+                        <li>📄 Internal CSS</li>
+                        <li>🌐 External CSS</li>
+                    </ul>
+                <li>🖋️ Manipolazione degli stili dei testi in CSS</li>
+                <li>🖼️ Manipolazione delle immagini</li>
+                <li>🔗 Modifica dello stile dei collegamenti</li>
+                <li>🎨 Modifica del colore di backgroud in CSS</li>
+            </ul>
+            <h3 style="text-align: left;">Link e riferimenti utili:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Argomento</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Introduzione al CSS</td>
+                        <td><a href="introcss.html" target="_blank">Introduzione a CSS</a></td>
+                    </tr>
+                    <tr>
+                        <td>Com'è fatto un foglio di stile CSS</td>
+                        <td><a href="https://www.html.it/pag/14215/come-fatto-un-css-regole-e-commenti/" target="_blank">Com'è fatto un CSS - HTML.it</a></td>
+                    </tr>
+                    <tr>
+                        <td>Valori di set in CSS</td>
+                        <td><a href="https://www.html.it/pag/14221/valori-e-unit-di-misura/" target="_blank">Valori e unità di misura nei CSS - HTML.IT</a></td>
+                    </tr>
+                    <tr>
+                        <td>Manipolare un'immagine con CSS</td>
+                        <td><a href="https://www.mrw.it/resize-crop-immagine-css/" target="_blank">Tagliare e ridimensionare un'immagine con CSS</a></td>
+                    </tr>
+                    <tr>
+                        <td>Personalizzare l'aspetto dei link con CSS</td>
+                        <td><a href="https://www.html.it/pag/18958/personalizzare-laspetto-dei-link/" target="_blank">Personalizzare l'aspetto dei link - HTML.it</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="section" style="width: 100%;">
+    <h1>Sezione con Esempio di Codice usato a lezione</h1>
+
+    <section class="code-section">
+        <h2 style="font-size: 40px;">Stile CSS Utilizzato</h2>
+        <p>Di seguito è riportato un esempio di codice CSS con commenti:</p>
+        <code>
+<code>
+<span style="color: lightblue;">body</span>, <span style="color: lightblue;">html</span> {<br>
+    &nbsp;&nbsp;<span style="color: lightblue;">background-color</span>: antiquewhite; <span style="color: green;">/* Colore di sfondo della pagina */</span><br>
+    &nbsp;&nbsp;<span style="color: lightblue;">font-family</span>: Arial, Helvetica, sans-serif; <span style="color: green;">/* Font principale */</span><br>
+}<br><br>
+
+<span style="color: lightblue;">h1</span> {<br>
+    &nbsp;&nbsp;<span style="color: lightblue;">font-size</span>: 64px; <span style="color: green;">/* Dimensione del titolo principale */</span><br>
+    &nbsp;&nbsp;<span style="color: lightblue;">color</span>: blue; <span style="color: green;">/* Colore del testo */</span><br>
+    &nbsp;&nbsp;<span style="color: lightblue;">text-align</span>: center; <span style="color: green;">/* Testo centrato */</span><br>
+    &nbsp;&nbsp;<span style="color: lightblue;">font-family</span>: 'Courier New', Courier, monospace; <span style="color: green;">/* Font personalizzato */</span><br>
+}<br><br>
+
+<span style="color: lightblue;">img</span> {<br>
+    &nbsp;&nbsp;<span style="color: lightblue;">border</span>: 2px solid #ddd; <span style="color: green;">/* Bordo grigio chiaro */</span><br>
+    &nbsp;&nbsp;<span style="color: lightblue;">border-radius</span>: 8px; <span style="color: green;">/* Arrotondamento degli angoli */</span><br>
+    &nbsp;&nbsp;<span style="color: lightblue;">width</span>: 100%; <span style="color: green;">/* Adatta la larghezza al contenitore */</span><br>
+    &nbsp;&nbsp;<span style="color: lightblue;">max-width</span>: 250px; <span style="color: green;">/* Limita la dimensione massima */</span><br>
+    &nbsp;&nbsp;<span style="color: lightblue;">height</span>: auto; <span style="color: green;">/* Mantiene le proporzioni */</span><br>
+    &nbsp;&nbsp;<span style="color: lightblue;">box-shadow</span>: 2px 2px 8px black; <span style="color: green;">/* Ombra nera */</span><br>
+    &nbsp;&nbsp;<span style="color: lightblue;">padding</span>: 2px; <span style="color: green;">/* Spaziatura interna */</span><br>
+}<br><br>
+
+<span style="color: lightblue;">a</span> { <span style="color: green;">/* Impostazioni grafiche per i link */</span><br>
+    &nbsp;&nbsp;<span style="color: lightblue;">color</span>: red; <span style="color: green;">/* Colore del testo rosso */</span><br>
+    &nbsp;&nbsp;<span style="color: lightblue;">text-decoration</span>: none; <span style="color: green;">/* Rimuove la sottolineatura */</span><br>
+}<br><br>
+
+<span style="color: lightblue;">a:hover</span> { <span style="color: green;">/* Settaggi quando si passa sul link con il mouse */</span><br>
+    &nbsp;&nbsp;<span style="color: lightblue;">color</span>: black; <span style="color: green;">/* Colore del testo nero quando si passa sopra */</span><br>
+    &nbsp;&nbsp;<span style="color: lightblue;">text-decoration</span>: underline; <span style="color: green;">/* Aggiunge una sottolineatura */</span><br>
+}
+        </code>
+    </section>
+</body>
+</html>
+
+        </div>
+    </div>
+
+</main>
+    <!-- Link di navigazione -->
+    <section class="footer">
+        <div class="section-container">
+            <div class="section">
+        <h2>Vai alla lezione precedente</h2>
+        <p><a href="Lezione1j.html">Introduzione a HTML 📄🌐 <br>Immagini e Link 🖼🔗</a></p>
+    </div>
+    <div class="section">
+        <h2>Continua alla prossima lezione</h2>
+        <p><a href="Lezione3j.html">Layout di Base con CSS 🏗📐</a></p>
+    </div>
+    </div>
+    <h2>Torna alla <a href="LaProgrammazioneDeiSogni.html">Home Page</a></h2>
+        <div style="text-align: center;">
+            <img src="ciafrei-corsani.png" alt="Ciafrei e Corsani" style="width: 200px; height: auto;">
+        </div>
+    </section>
+
+    </body>
+</html>
