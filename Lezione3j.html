@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="LaProgrammazioneDeiSogni.css">
+    <title>Lezione 3: Layout di Base con CSS e liste 🏗📐</title>
+</head>
+<body>
+
+    <header>
+        <h1>Lezione 3</h1>
+        <p class="sottotitolo">Layout di Base con CSS, liste e sections 🏗📐</p> <!--Aggiungi...-->
+    </header>
+
+    <main>
+        <div class="section-container">
+        <div class="section" style="width: 100%;">
+            <h2 style="font-size: 40px;">Argomenti della lezione</h2>
+            <ul style="font-size: 16px; text-align: justify;">
+                <li>Introduzione alle immagini di background 🖼️</li>
+                <li>Introduzione alle liste non ordinate 📋</li>
+                <li>Layout delle liste 📝</li>
+                <li>Introduzione alle sections 📚</li>
+                <li>Layout delle sections 🏗️</li>
+            </ul>
+            <h3 style="text-align: left;">Link e riferimenti utili:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Argomento</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Inrtroduzione alle immagini di background</td>
+                        <td><a href="https://www.html.it/pag/14225/gestione-dello-sfondo/" target="_blank">Immagini di backgroud - HTML.it</a></td>
+                    </tr>
+                    <tr>
+                        <td>Introduzione alle liste non ordinate</td>
+                        <td><a href="https://www.freecodecamp.org/italian/news/elenchi-puntati-html-come-creare-una-lista-non-ordinata-con-il-tag-ul/" target="_blank">Liste non ordinate - FreeCodeCamp</a></td>
+                    </tr>
+                    <tr>
+                        <td>Introduzione alle sections</td>
+                        <td><a href="https://www.html.it/pag/19271/section/" target="_blank">Introduzione alle sections - HTML.it</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="section" style="width: 100%;">
+    <h1>Sezione con Esempio di Codice usato a lezione</h1>
+    <section class="code-section">
+        <h2 style="font-size: 40px;">HTML</h2>
+        <p>Di seguito è riportato un esempio di codice HTML con commenti:</p>
+        <code>
+                &lt;!DOCTYPE html&gt;<br>
+                &lt;html&gt;<br>
+                &lt;head&gt;<br>
+                &nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+                &nbsp;&nbsp;&lt;link rel="stylesheet" href="corso.css"&gt;<br>
+                &nbsp;&nbsp;&lt;h1 title="Scritta"&gt;<span style="color: lightblue;">Il mio sito web</span>&lt;/h1&gt;<br>
+                &nbsp;&nbsp;&lt;title&gt;<span style="color: lightblue;">Il mio sito web</span>&lt;/title&gt;<br>
+                &lt;/head&gt;<br>
+                &lt;body&gt;<br>
+                &nbsp;&nbsp;&lt;!-- Contenitore per le sezioni --&gt;<br>
+                &nbsp;&nbsp;&lt;div class="section-container"&gt; <span style="color: green;">/* Parte in aqua */</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Prima sezione --&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="section"&gt; <span style="color: green;">/* Parte in grigio */</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Elenco non ordinato per la prima sezione --&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Primo elemento della lista --&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<span style="color: lightblue;">Elemento 1</span>&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Elenco non ordinato annidato per il primo elemento della lista --&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Primo elemento annidato della lista con colore personalizzato --&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li style="color: rgb(255, 72, 0);"&gt;<span style="color: lightcoral;">Sottoelemento 1</span>&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Seconda sezione --&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="section"&gt; <span style="color: green;">/* Parte in grigio */</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Elenco non ordinato per la seconda sezione --&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Secondo elemento della lista --&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<span style="color: lightblue;">Elemento 2</span>&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Elenco non ordinato annidato per il secondo elemento della lista --&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Secondo elemento annidato della lista con colore personalizzato --&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li style="color: rgb(255, 72, 0);"&gt;<span style="color: lightcoral;">Sottoelemento 2</span>&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                &nbsp;&nbsp;&lt;/div&gt;<br>
+                &lt;/body&gt;<br>
+                &lt;/html&gt;
+            </code>
+    </section>
+
+    <section class="code-section">
+        <h2 style="font-size: 40px;">Stile CSS Utilizzato</h2>
+        <p>Di seguito è riportato un esempio di codice CSS con commenti:</p>
+<code>
+        <span style="color: lightblue;">body</span>, <span style="color: lightblue;">html</span> {<br>
+            &nbsp;&nbsp;<span style="color: lightblue;">background-image</span>: url(amazon.jpg); <span style="color: green;">/* Inserimento immagine di background */</span><br>
+            &nbsp;&nbsp;<span style="color: lightblue;">font-family</span>: Arial, Helvetica, sans-serif; <span style="color: green;">/* Font principale */</span><br>
+        }<br><br>
+        
+        <span style="color: lightblue;">li</span> { <span style="color: green;">/* Stile per le liste */</span><br>
+            &nbsp;&nbsp;<span style="color: lightblue;">color</span>: rgb(0, 0, 0);<br>
+            &nbsp;&nbsp;<span style="color: lightblue;">border</span>: 2px solid #ddd;<br>
+            &nbsp;&nbsp;<span style="color: lightblue;">border-radius</span>: 8px;<br>
+            &nbsp;&nbsp;<span style="color: lightblue;">width</span>: auto;<br>
+            &nbsp;&nbsp;<span style="color: lightblue;">max-width</span>: 250px;<br>
+            &nbsp;&nbsp;<span style="color: lightblue;">height</span>: auto;<br>
+            &nbsp;&nbsp;<span style="color: lightblue;">box-shadow</span>: 2px 2px 8px black;<br>
+            &nbsp;&nbsp;<span style="color: lightblue;">text-align</span>: center;<br>
+        }<br><br>
+        
+        <span style="color: lightblue;">ul</span> { <span style="color: green;">/* Stile per l'intera lista */</span><br>
+            &nbsp;&nbsp;<span style="color: lightblue;">padding</span>: 10px;<br>
+        }<br><br>
+        
+        <span style="color: lightblue;">.section-container</span> { <span style="color: green;">/* Stile per il contenitore delle sezioni */</span><br>
+            &nbsp;&nbsp;<span style="color: lightblue;">display</span>: flex;<br>
+            &nbsp;&nbsp;<span style="color: lightblue;">padding</span>: 20px;<br>
+            &nbsp;&nbsp;<span style="color: lightblue;">gap</span>: 20px;<br>
+            &nbsp;&nbsp;<span style="color: lightblue;">background-color</span>: aqua;<br>
+            &nbsp;&nbsp;<span style="color: lightblue;">font-size</span>: 30px;<br>
+            &nbsp;&nbsp;<span style="color: lightblue;">font-family</span>: 'Courier New', Courier, monospace;<br>
+        }<br><br>
+        
+        <span style="color: lightblue;">.section</span> { <span style="color: green;">/* Stile per le sezioni */</span><br>
+            &nbsp;&nbsp;<span style="color: lightblue;">background-color</span>: gray;<br>
+            &nbsp;&nbsp;<span style="color: lightblue;">padding</span>: 20px;<br>
+            &nbsp;&nbsp;<span style="color: lightblue;">width</span>: 600px;<br>
+            &nbsp;&nbsp;<span style="color: lightblue;">text-align</span>: center;<br>
+        }<br>
+        
+        </code>
+    </section>
+</body>
+</html>
+
+        </div>
+    </div>
+
+</main>
+    <!-- Link di navigazione -->
+    <section class="footer">
+        <div class="section-container">
+            <div class="section">
+        <h2>Vai alla lezione precedente</h2>
+        <p><a href="Lezione2j.html">Introduzione a CSS 🎨💅</a></p>
+    </div>
+    <div class="section">
+        <h2>Continua alla prossima lezione</h2>
+        <p><a href="Lezione4j.html">Introduzione alle Tabelle 📊📈</a></p>
+    </div>
+    </div>
+    <h2>Torna alla <a href="LaProgrammazioneDeiSogni.html">Home Page</a></h2>
+        <div style="text-align: center;">
+            <img src="ciafrei-corsani.png" alt="Ciafrei e Corsani" style="width: 200px; height: auto;">
+        </div>
+    </section>
+
+    </body>
+</html>
