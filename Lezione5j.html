@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="LaProgrammazioneDeiSogni.css">
-    <title>Lezione 5: Tabelle 📊📈 Forms e input 📝🔧 - uso di GitHub 🤖</title>
+    <title>Lezione 5: Ripasso liste 📋, Tabelle 📊📈, menù 📖 e introduzione a GitHub 🤖</title>
 </head>
 <body>
 
     <header>
-        <h1>Lezione 4</h1>
-        <p class="sottotitolo">Tabelle 📊📈 Forms e input 📝🔧 - uso di GitHub 🤖</p> <!--Aggiungi...-->
+        <h1>Lezione 5</h1>
+        <p class="sottotitolo">Ripasso liste 📋, Tabelle 📊📈, menù 📖 e introduzione a GitHub 🤖</p> <!--Aggiungi...-->
     </header>
 
     <main>
@@ -22,12 +22,7 @@
                 <li>Ripasso delle liste</li>
                 <li>Introduzione alle tabelle (tag <b>table, tr e th</b>)</li>
                 <li>Tag <b>caption, thead, tbody e tfoot</b></li>
-                <li>Introduzione ai forms</li>
-                <li>Esercitazione ✍️</li>
-
-                https://www.html.it/pag/16069/struttura-del-tag-form/
-
-                https://www.html.it/pag/16055/tabella-struttura-di-base/
+                <li>Introduzione a GitHub</li>
             </ul>
             <h3 style="text-align: left;">Link e riferimenti utili:</h3>
             <table>
@@ -39,12 +34,21 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Uso delle sections e dei section-container</td>
-                        <td><a href="https://www.w3schools.com/w3css/w3css_containers.asp" target="_blank">Containers - W3schools</a></td>
+                        <td>Introduzione alle tabelle 📊</td>
+                        <td><a href="https://www.html.it/pag/16055/tabella-struttura-di-base/" target="_blank">Introduzione alle tabelle - HTML.it</a></td>
                     </tr>
                     <tr>
-                        <td>Ordinamento di una pagina web</td>
+                        <td>Ordinamento di una pagina web 📄</td>
                         <td><a href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">Elementi semantici - W3schools</a></td>
+                    </tr>
+                    <tr>
+                        <td>Menù orizzontali 📖</td>
+                        <td><a href="https://www.html.it/pag/18988/menu-orizzontale-statico-con-le-liste/" target="_blank">Menù orizzontali - HTML.it</a></td>
+                    </tr>
+                    <tr>
+                        <td>GitHub 🤖</td>
+                        <td><a href="https://github.com/" target="_blank">GitHub 🤖</a></td>
+                    </tr>
                     </tr>
                 </tbody>
             </table>
@@ -54,51 +58,53 @@
     <section class="code-section">
         <h2 style="font-size: 40px;">HTML</h2>
         <p>Di seguito è riportato un esempio di codice HTML con commenti:</p>
-        <code>
+            <h2>Codice HTML Completo</h2>
             <code>
-                &lt;!DOCTYPE html&gt;<br>
-                &lt;<span style="color:blue;">html</span>&gt;<br>
-                &nbsp;&nbsp;&lt;<span style="color:blue;">head</span>&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">meta</span> <span style="color:red;">charset</span>=<span style="color:orange;">"UTF-8"</span>&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">link</span> <span style="color:red;">rel</span>=<span style="color:orange;">"stylesheet"</span> <span style="color:red;">href</span>=<span style="color:orange;">"corso.css"</span>&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">h1</span> <span style="color:red;">title</span>=<span style="color:orange;">"Scritta"</span>&gt;<span style="color:purple;">Il mio sito web</span>&lt;/<span style="color:blue;">h1</span>&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">title</span>&gt;<span style="color:purple;">Il mio sito web</span>&lt;/<span style="color:blue;">title</span>&gt;<br>
-                &nbsp;&nbsp;&lt;/<span style="color:blue;">head</span>&gt;<br><br>
-                
-                &nbsp;&nbsp;&lt;<span style="color:blue;">body</span>&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- <span style="color:green;">Contenitore per le sezioni</span> --&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">div</span> <span style="color:red;">class</span>=<span style="color:orange;">"section-container"</span>&gt; <span style="color:green;">/* Parte in aqua */</span><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- <span style="color:green;">Prima sezione</span> --&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">div</span> <span style="color:red;">class</span>=<span style="color:orange;">"section"</span>&gt; <span style="color:green;">/* Parte in grigio */</span><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- <span style="color:green;">Elenco non ordinato per la prima sezione</span> --&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">ul</span>&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- <span style="color:green;">Primo elemento della lista</span> --&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">li</span>&gt;<span style="color:purple;">Elemento 1</span>&lt;/<span style="color:blue;">li</span>&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- <span style="color:green;">Elenco non ordinato annidato per il primo elemento della lista</span> --&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">ul</span>&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- <span style="color:green;">Primo elemento annidato della lista con colore personalizzato</span> --&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">li</span> <span style="color:red;">style</span>=<span style="color:orange;">"color: rgb(255, 72, 0);"</span>&gt;<span style="color:purple;">Sottoelemento 1</span>&lt;/<span style="color:blue;">li</span>&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span style="color:blue;">ul</span>&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span style="color:blue;">ul</span>&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span style="color:blue;">div</span>&gt;<br><br>
-                
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- <span style="color:green;">Seconda sezione</span> --&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">div</span> <span style="color:red;">class</span>=<span style="color:orange;">"section"</span>&gt; <span style="color:green;">/* Parte in grigio */</span><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- <span style="color:green;">Elenco non ordinato per la seconda sezione</span> --&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">ul</span>&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- <span style="color:green;">Secondo elemento della lista</span> --&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">li</span>&gt;<span style="color:purple;">Elemento 2</span>&lt;/<span style="color:blue;">li</span>&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- <span style="color:green;">Elenco non ordinato annidato per il secondo elemento della lista</span> --&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">ul</span>&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- <span style="color:green;">Secondo elemento annidato della lista con colore personalizzato</span> --&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">li</span> <span style="color:red;">style</span>=<span style="color:orange;">"color: rgb(255, 72, 0);"</span>&gt;<span style="color:purple;">Sottoelemento 2</span>&lt;/<span style="color:blue;">li</span>&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span style="color:blue;">ul</span>&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span style="color:blue;">ul</span>&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span style="color:blue;">div</span>&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span style="color:blue;">div</span>&gt;<br>
-                &lt;/<span style="color:blue;">body</span>&gt;<br>
-                &lt;/<span style="color:blue;">html</span>&gt;
+                &lt;!DOCTYPE html&gt; <span class="comment">&lt;!-- Specifica il tipo di documento come HTML5 --&gt;</span><br>
+                &lt;<span class="tag">html</span> <span class="attribute">lang</span>=<span class="value">"it"</span>&gt; <span class="comment">&lt;!-- Inizio del documento HTML e lingua impostata su italiano --&gt;</span><br>
+                &nbsp;&nbsp;&lt;<span class="tag">head</span>&gt; <span class="comment">&lt;!-- Inizio della sezione head per i metadati --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt; <span class="comment">&lt;!-- Specifica la codifica dei caratteri --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">meta</span> <span class="attribute">name</span>=<span class="value">"viewport"</span> <span class="attribute">content</span>=<span class="value">"width=device-width, initial-scale=1.0"</span>&gt; <span class="comment">&lt;!-- Garantisce un design responsivo --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">title</span>&gt;<span class="text">Lezione: Liste e Tabelle</span>&lt;/<span class="tag">title</span>&gt; <span class="comment">&lt;!-- Titolo della pagina mostrato nella scheda del browser --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"Esercizio.css"</span>&gt; <span class="comment">&lt;!-- Collega il file CSS per lo stile --&gt;</span><br>
+                &nbsp;&nbsp;&lt;/<span class="tag">head</span>&gt; <span class="comment">&lt;!-- Fine della sezione head --&gt;</span><br>
+                &nbsp;&nbsp;&lt;<span class="tag">body</span>&gt; <span class="comment">&lt;!-- Inizio del corpo della pagina --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">header</span>&gt; <span class="comment">&lt;!-- Inizio dell'intestazione --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">h1</span>&gt;<span class="text">Ripasso delle Liste e Introduzione alle Tabelle</span>&lt;/<span class="tag">h1</span>&gt; <span class="comment">&lt;!-- Titolo principale della pagina --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="tag">header</span>&gt; <span class="comment">&lt;!-- Fine dell'intestazione --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">main</span>&gt; <span class="comment">&lt;!-- Inizio della sezione principale --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">section</span>&gt; <span class="comment">&lt;!-- Sezione per le liste --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">h2</span>&gt;<span class="text">Ripasso: Liste</span>&lt;/<span class="tag">h2</span>&gt; <span class="comment">&lt;!-- Sottotitolo per le liste --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">h3</span>&gt;<span class="text">Lista non ordinata</span>&lt;/<span class="tag">h3</span>&gt; <span class="comment">&lt;!-- Sottotitolo per la lista non ordinata --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">ul</span>&gt; <span class="comment">&lt;!-- Inizio lista non ordinata --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">li</span>&gt;<span class="text">Elemento 1</span>&lt;/<span class="tag">li</span>&gt; <span class="comment">&lt;!-- Primo elemento della lista --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">li</span>&gt;<span class="text">Elemento 2</span> <span class="comment">&lt;!-- Secondo elemento della lista --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">ul</span>&gt; <span class="comment">&lt;!-- Lista annidata --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">li</span>&gt;<span class="text">Sottoelemento 2.1</span>&lt;/<span class="tag">li</span>&gt; <span class="comment">&lt;!-- Primo sottoelemento --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">li</span>&gt;<span class="text">Sottoelemento 2.2</span>&lt;/<span class="tag">li</span>&gt; <span class="comment">&lt;!-- Secondo sottoelemento --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="tag">ul</span>&gt; <span class="comment">&lt;!-- Fine lista annidata --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="tag">li</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="tag">ul</span>&gt; <span class="comment">&lt;!-- Fine lista non ordinata --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">h3</span>&gt;<span class="text">Lista ordinata</span>&lt;/<span class="tag">h3</span>&gt; <span class="comment">&lt;!-- Sottotitolo per la lista ordinata --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">ol</span>&gt; <span class="comment">&lt;!-- Inizio lista ordinata --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">li</span>&gt;<span class="text">Primo elemento</span>&lt;/<span class="tag">li</span>&gt; <span class="comment">&lt;!-- Primo elemento --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">li</span>&gt;<span class="text">Secondo elemento</span>&lt;/<span class="tag">li</span>&gt; <span class="comment">&lt;!-- Secondo elemento --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">li</span>&gt;<span class="text">Terzo elemento</span>&lt;/<span class="tag">li</span>&gt; <span class="comment">&lt;!-- Terzo elemento --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="tag">ol</span>&gt; <span class="comment">&lt;!-- Fine lista ordinata --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">h3</span>&gt;<span class="text">Lista di definizione</span>&lt;/<span class="tag">h3</span>&gt; <span class="comment">&lt;!-- Sottotitolo per lista di definizione --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">dl</span>&gt; <span class="comment">&lt;!-- Inizio lista di definizione --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">dt</span>&gt;<span class="text">HTML</span>&lt;/<span class="tag">dt</span>&gt; <span class="comment">&lt;!-- Termine: HTML --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">dd</span>&gt;<span class="text">Linguaggio di markup per strutturare le pagine web.</span>&lt;/<span class="tag">dd</span>&gt; <span class="comment">&lt;!-- Definizione di HTML --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">dt</span>&gt;<span class="text">CSS</span>&lt;/<span class="tag">dt</span>&gt; <span class="comment">&lt;!-- Termine: CSS --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">dd</span>&gt;<span class="text">Linguaggio per definire lo stile delle pagine web.</span>&lt;/<span class="tag">dd</span>&gt; <span class="comment">&lt;!-- Definizione di CSS --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="tag">dl</span>&gt; <span class="comment">&lt;!-- Fine lista di definizione --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="tag">section</span>&gt; <span class="comment">&lt;!-- Fine sezione per le liste --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="tag">main</span>&gt; <span class="comment">&lt;!-- Fine della sezione principale --&gt;</span><br>
+                &nbsp;&nbsp;&lt;/<span class="tag">body</span>&gt; <span class="comment">&lt;!-- Fine del corpo della pagina --&gt;</span><br>
+                &lt;/<span class="tag">html</span>&gt; <span class="comment">&lt;!-- Fine del documento HTML --&gt;</span>
             </code>
+        </section>
+        
             
     </section>
 
@@ -106,164 +112,171 @@
         <h2 style="font-size: 40px;">Stile CSS Utilizzato</h2>
         <p>Di seguito è riportato un esempio di codice CSS con commenti:</p>
         <code>
-            <span style="color: lightblue;">body</span>, <span style="color: lightblue;">html</span> {<br>
-                &nbsp;&nbsp;<span style="color: lightblue;">background-color</span>: antiquewhite; <span style="color: green;">/* Imposta il colore di sfondo di body e html a antiquewhite */</span><br>
-                &nbsp;&nbsp;<span style="color: lightblue;">font-family</span>: Arial, Helvetica, sans-serif; <span style="color: green;">/* Font principale */</span><br>
+            <span style="color: lightblue;">body</span> {<br>
+                &nbsp;&nbsp;<span style="color: lightblue;">font-family</span>: Arial, Helvetica, sans-serif; <span style="color: green;">/* Imposta il font principale */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">margin</span>: 0; <span style="color: green;">/* Rimuove il margine predefinito del browser */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">background-color</span>: #f9f9f9; <span style="color: green;">/* Colore di sfondo chiaro */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">line-height</span>: 1.6; <span style="color: green;">/* Imposta l'altezza delle righe per una migliore leggibilità */</span><br>
             }<br><br>
         
-            <span style="color: lightblue;">h1</span> {<br>
-                &nbsp;&nbsp;<span style="color: lightblue;">font-size</span>: 64px; <span style="color: green;">/* Dimensione del font degli h1 */</span><br>
-                &nbsp;&nbsp;<span style="color: lightblue;">color</span>: blue; <span style="color: green;">/* Colore del testo degli h1 */</span><br>
-                &nbsp;&nbsp;<span style="color: lightblue;">text-align</span>: center; <span style="color: green;">/* Centra il testo degli h1 */</span><br>
-                &nbsp;&nbsp;<span style="color: lightblue;">font-family</span>: 'Courier New', Courier, monospace; <span style="color: green;">/* Font personalizzato per gli h1 */</span><br>
-            }<br><br>
-        
-            <span style="color: lightblue;">img</span> {<br>
-                &nbsp;&nbsp;<span style="color: lightblue;">border</span>: 2px solid #ddd; <span style="color: green;">/* Bordo alle immagini */</span><br>
-                &nbsp;&nbsp;<span style="color: lightblue;">border-radius</span>: 8px; <span style="color: green;">/* Arrotonda gli angoli */</span><br>
-                &nbsp;&nbsp;<span style="color: lightblue;">width</span>: 100%; <span style="color: green;">/* Larghezza massima */</span><br>
-                &nbsp;&nbsp;<span style="color: lightblue;">max-width</span>: 250px;<br>
-                &nbsp;&nbsp;<span style="color: lightblue;">height</span>: auto; <span style="color: green;">/* Mantiene il rapporto d'aspetto */</span><br>
-                &nbsp;&nbsp;<span style="color: lightblue;">box-shadow</span>: 2px 2px 8px black; <span style="color: green;">/* Aggiunge ombra */</span><br>
-                &nbsp;&nbsp;<span style="color: lightblue;">padding</span>: 2px; <span style="color: green;">/* Padding intorno alle immagini */</span><br>
-            }<br><br>
-        
-            <span style="color: lightblue;">a</span> {<br>
-                &nbsp;&nbsp;<span style="color: lightblue;">color</span>: red; <span style="color: green;">/* Colore dei link */</span><br>
-                &nbsp;&nbsp;<span style="color: lightblue;">text-decoration</span>: none; <span style="color: green;">/* Rimuove la sottolineatura */</span><br>
-            }<br><br>
-        
-            <span style="color: lightblue;">li</span> {<br>
-                &nbsp;&nbsp;<span style="color: lightblue;">color</span>: rgb(0, 0, 0); <span style="color: green;">/* Colore degli elementi della lista */</span><br>
-                &nbsp;&nbsp;<span style="color: lightblue;">border</span>: 2px solid #ddd; <span style="color: green;">/* Bordo degli elementi della lista */</span><br>
-                &nbsp;&nbsp;<span style="color: lightblue;">border-radius</span>: 8px; <span style="color: green;">/* Arrotonda gli angoli */</span><br>
-                &nbsp;&nbsp;<span style="color: lightblue;">width</span>: auto;<br>
-                &nbsp;&nbsp;<span style="color: lightblue;">max-width</span>: 250px;<br>
-                &nbsp;&nbsp;<span style="color: lightblue;">height</span>: auto;<br>
-                &nbsp;&nbsp;<span style="color: lightblue;">box-shadow</span>: 2px 2px 8px black; <span style="color: green;">/* Aggiunge ombra agli elementi */</span><br>
+            <span style="color: lightblue;">header</span> {<br>
+                &nbsp;&nbsp;<span style="color: lightblue;">background-color</span>: #4CAF50; <span style="color: green;">/* Colore verde per l'intestazione */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">color</span>: white; <span style="color: green;">/* Colore del testo bianco */</span><br>
                 &nbsp;&nbsp;<span style="color: lightblue;">text-align</span>: center; <span style="color: green;">/* Centra il testo */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">padding</span>: 20px; <span style="color: green;">/* Aggiunge spazio interno */</span><br>
             }<br><br>
         
-            <span style="color: lightblue;">ul</span> {<br>
-                &nbsp;&nbsp;<span style="color: lightblue;">padding</span>: 10px; <span style="color: green;">/* Padding intorno agli elenchi non ordinati */</span><br>
+            <span style="color: lightblue;">h1</span>, <span style="color: lightblue;">h2</span> {<br>
+                &nbsp;&nbsp;<span style="color: lightblue;">color</span>: #333; <span style="color: green;">/* Colore del testo scuro */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">text-align</span>: center; <span style="color: green;">/* Centra i titoli */</span><br>
             }<br><br>
         
-            <span style="color: lightblue;">a:hover</span> {<br>
-                &nbsp;&nbsp;<span style="color: lightblue;">color</span>: black; <span style="color: green;">/* Cambia il colore al passaggio del mouse */</span><br>
-                &nbsp;&nbsp;<span style="color: lightblue;">text-decoration</span>: underline; <span style="color: green;">/* Aggiunge sottolineatura al passaggio del mouse */</span><br>
+            <span style="color: lightblue;">section</span> {<br>
+                &nbsp;&nbsp;<span style="color: lightblue;">margin</span>: 20px auto; <span style="color: green;">/* Aggiunge margine sopra e sotto e centra la sezione */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">max-width</span>: 800px; <span style="color: green;">/* Imposta una larghezza massima */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">background-color</span>: white; <span style="color: green;">/* Colore di sfondo bianco */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">padding</span>: 20px; <span style="color: green;">/* Aggiunge spazio interno */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">box-shadow</span>: 0px 2px 8px rgba(0, 0, 0, 0.1); <span style="color: green;">/* Aggiunge un'ombra leggera */</span><br>
             }<br><br>
         
-            <span style="color: lightblue;">.section-container</span> {<br>
-                &nbsp;&nbsp;<span style="color: lightblue;">display</span>: flex; <span style="color: green;">/* Contenitore flessibile */</span><br>
-                &nbsp;&nbsp;<span style="color: lightblue;">padding</span>: 20px;<br>
-                &nbsp;&nbsp;<span style="color: lightblue;">gap</span>: 20px;<br>
-                &nbsp;&nbsp;<span style="color: lightblue;">background-color</span>: aqua; <span style="color: green;">/* Sfondo aqua */</span><br>
-                &nbsp;&nbsp;<span style="color: lightblue;">font-size</span>: 30px;<br>
-                &nbsp;&nbsp;<span style="color: lightblue;">font-family</span>: 'Courier New', Courier, monospace; <span style="color: green;">/* Font personalizzato */</span><br>
+            <span style="color: lightblue;">ul</span>, <span style="color: lightblue;">ol</span>, <span style="color: lightblue;">dl</span> {<br>
+                &nbsp;&nbsp;<span style="color: lightblue;">margin</span>: 20px; <span style="color: green;">/* Aggiunge margine attorno alle liste */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">padding</span>: 10px; <span style="color: green;">/* Aggiunge padding interno */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">background-color</span>: #f4f4f4; <span style="color: green;">/* Colore di sfondo chiaro */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">border</span>: 1px solid #ddd; <span style="color: green;">/* Bordo sottile grigio */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">border-radius</span>: 5px; <span style="color: green;">/* Arrotonda gli angoli */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">list-style-position</span>: inside; <span style="color: green;">/* Posiziona i marker delle liste all'interno */</span><br>
             }<br><br>
         
-            <span style="color: lightblue;">.section</span> {<br>
-                &nbsp;&nbsp;<span style="color: lightblue;">background-color</span>: gray; <span style="color: green;">/* Sfondo grigio */</span><br>
-                &nbsp;&nbsp;<span style="color: lightblue;">padding</span>: 20px;<br>
-                &nbsp;&nbsp;<span style="color: lightblue;">width</span>: 600px; <span style="color: green;">/* Larghezza sezioni */</span><br>
-                &nbsp;&nbsp;<span style="color: lightblue;">text-align</span>: center; <span style="color: green;">/* Testo centrato */</span><br>
-            }<br>
-        </code>
+            <span style="color: lightblue;">ul</span> <span style="color: lightblue;">ul</span>, <span style="color: lightblue;">ol</span> <span style="color: lightblue;">ol</span> {<br>
+                &nbsp;&nbsp;<span style="color: lightblue;">margin-left</span>: 20px; <span style="color: green;">/* Indenta le liste annidate */</span><br>
+            }<br><br>
+        
+            <span style="color: lightblue;">dl dt</span> {<br>
+                &nbsp;&nbsp;<span style="color: lightblue;">font-weight</span>: bold; <span style="color: green;">/* Testo in grassetto per i termini della lista di definizione */</span><br>
+            }<br><br>
+        
+            <span style="color: lightblue;">dl dd</span> {<br>
+                &nbsp;&nbsp;<span style="color: lightblue;">margin-left</span>: 20px; <span style="color: green;">/* Indenta le descrizioni della lista di definizione */</span><br>
+            }<br><br>
+        
+            <span style="color: lightblue;">table</span> {<br>
+                &nbsp;&nbsp;<span style="color: lightblue;">width</span>: 100%; <span style="color: green;">/* Imposta la larghezza al 100% del contenitore */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">border-collapse</span>: collapse; <span style="color: green;">/* Rimuove gli spazi tra le celle */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">margin</span>: 20px 0; <span style="color: green;">/* Aggiunge margine sopra e sotto */</span><br>
+            }<br><br>
+        
+            <span style="color: lightblue;">table</span>, <span style="color: lightblue;">th</span>, <span style="color: lightblue;">td</span> {<br>
+                &nbsp;&nbsp;<span style="color: lightblue;">border</span>: 1px solid #ddd; <span style="color: green;">/* Bordo sottile grigio */</span><br>
+            }<br><br>
+        
+            <span style="color: lightblue;">caption</span> {<br>
+                &nbsp;&nbsp;<span style="color: lightblue;">font-weight</span>: bold; <span style="color: green;">/* Testo in grassetto per il titolo della tabella */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">margin-bottom</span>: 10px; <span style="color: green;">/* Aggiunge spazio sotto il titolo */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">text-align</span>: center; <span style="color: green;">/* Centra il titolo */</span><br>
+            }<br><br>
+        
+            <span style="color: lightblue;">th</span> {<br>
+                &nbsp;&nbsp;<span style="color: lightblue;">background-color</span>: #4CAF50; <span style="color: green;">/* Colore di sfondo verde per l'intestazione */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">color</span>: white; <span style="color: green;">/* Colore del testo bianco */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">padding</span>: 10px; <span style="color: green;">/* Aggiunge padding interno */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">text-align</span>: left; <span style="color: green;">/* Allinea il testo a sinistra */</span><br>
+            }<br><br>
+        
+            <span style="color: lightblue;">td</span> {<br>
+                &nbsp;&nbsp;<span style="color: lightblue;">padding</span>: 10px; <span style="color: green;">/* Aggiunge padding interno alle celle */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">text-align</span>: left; <span style="color: green;">/* Allinea il testo a sinistra */</span><br>
+            }<br><br>
+        
+            <span style="color: lightblue;">tfoot td</span> {<br>
+                &nbsp;&nbsp;<span style="color: lightblue;">font-weight</span>: bold; <span style="color: green;">/* Testo in grassetto per il footer */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">background-color</span>: #f4f4f4; <span style="color: green;">/* Colore di sfondo chiaro */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">text-align</span>: right; <span style="color: green;">/* Allinea il testo a destra */</span><br>
+            }<br><br>
+        
+            <span style="color: lightblue;">footer</span> {<br>
+                &nbsp;&nbsp;<span style="color: lightblue;">text-align</span>: center; <span style="color: green;">/* Centra il testo del footer */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">background-color</span>: #4CAF50; <span style="color: green;">/* Colore di sfondo verde */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">color</span>: white; <span style="color: green;">/* Colore del testo bianco */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">padding</span>: 10px; <span style="color: green;">/* Aggiunge padding interno */</span><br>
+                &nbsp;&nbsp;<span style="color: lightblue;">margin-top</span>: 20px; <span style="color: green;">/* Aggiunge margine sopra il footer */</span><br>
+            }
+        </code>        
         
     </section>
 
     
-        <h1>Esercizio sviluppato a lezione</h1>
+        <h1>Menù sviluppato da Vincenzo</h1>
         <section class="code-section">
             <h2 style="font-size: 40px;">HTML</h2>
             <p>Di seguito è riportato il codice HTML sviluppato a:</p>
             <code>
-                
-                    &lt;!DOCTYPE html&gt;<br>
-                    &lt;<span style="color:blue;">html</span>&gt;<br>
-                    &nbsp;&nbsp;&lt;<span style="color:blue;">head</span>&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- <span style="color:green;">Collegamento al file CSS per la stilizzazione della pagina</span> --&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">link</span> <span style="color:red;">rel</span>=<span style="color:orange;">"stylesheet"</span> <span style="color:red;">href</span>=<span style="color:orange;">"Esercizio.css"</span> /&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- <span style="color:green;">Titolo principale della pagina</span> --&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">h1</span>&gt;<span style="color:purple;">Esercizio</span>&lt;/<span style="color:blue;">h1</span>&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- <span style="color:green;">Titolo mostrato nella scheda del browser</span> --&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">title</span>&gt;<span style="color:purple;">Esercizio</span>&lt;/<span style="color:blue;">title</span>&gt;<br>
-                    &nbsp;&nbsp;&lt;/<span style="color:blue;">head</span>&gt;<br><br>
-                
-                    &nbsp;&nbsp;&lt;<span style="color:blue;">body</span>&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- <span style="color:green;">Menu di navigazione</span> --&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">nav</span>&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">ul</span>&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- <span style="color:green;">Collegamenti alle diverse sezioni della pagina</span> --&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">li</span>&gt;&lt;<span style="color:blue;">a</span> <span style="color:red;">href</span>=<span style="color:orange;">"#sezione1"</span>&gt;<span style="color:purple;">Vai alla sezione 1</span>&lt;/<span style="color:blue;">a</span>&gt;&lt;/<span style="color:blue;">li</span>&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">li</span>&gt;&lt;<span style="color:blue;">a</span> <span style="color:red;">href</span>=<span style="color:orange;">"#sezione2"</span>&gt;<span style="color:purple;">Vai alla sezione 2</span>&lt;/<span style="color:blue;">a</span>&gt;&lt;/<span style="color:blue;">li</span>&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">li</span>&gt;&lt;<span style="color:blue;">a</span> <span style="color:red;">href</span>=<span style="color:orange;">"#sezione3"</span>&gt;<span style="color:purple;">Vai alla sezione 3</span>&lt;/<span style="color:blue;">a</span>&gt;&lt;/<span style="color:blue;">li</span>&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">li</span>&gt;&lt;<span style="color:blue;">a</span> <span style="color:red;">href</span>=<span style="color:orange;">"#sezione4"</span>&gt;<span style="color:purple;">Vai alla sezione 4</span>&lt;/<span style="color:blue;">a</span>&gt;&lt;/<span style="color:blue;">li</span>&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- <span style="color:green;">Collegamento a un'altra pagina</span> --&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">li</span>&gt;&lt;<span style="color:blue;">a</span> <span style="color:red;">href</span>=<span style="color:orange;">"page1.html"</span>&gt;<span style="color:purple;">Vai alla pagina 1</span>&lt;/<span style="color:blue;">a</span>&gt;&lt;/<span style="color:blue;">li</span>&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span style="color:blue;">ul</span>&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span style="color:blue;">nav</span>&gt;<br><br>
-                
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- <span style="color:green;">Contenitore principale per le prime due sezioni</span> --&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">div</span> <span style="color:red;">class</span>=<span style="color:orange;">"section-container"</span> <span style="color:red;">id</span>=<span style="color:orange;">"menu"</span>&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- <span style="color:green;">Prima sezione</span> --&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">div</span> <span style="color:red;">class</span>=<span style="color:orange;">"sezioni_affiancate"</span> <span style="color:red;">id</span>=<span style="color:orange;">"sezione1"</span>&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">ul</span>&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">li</span>&gt;<span style="color:purple;">Prova</span>&lt;/<span style="color:blue;">li</span>&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:blue;">li</span>&gt;<span style="color:purple;">Prova</span>&lt;/<span style="color:blue;">li</span>&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span style="color:blue;">ul</span>&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span style="color:blue;">div</span>&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span style="color:blue;">div</span>&gt;<br>
-                    &lt;/<span style="color:blue;">body</span>&gt;<br>
-                    &lt;/<span style="color:blue;">html</span>&gt;
-                </code>
+                <!-- Sezione del menu di navigazione -->
+                <span style="color: lightblue;">&lt;nav</span> <span style="color: orange;">class</span>=<span style="color: yellow;">"menu"</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">Lista non ordinata per i link del menu</span>
+
+                    &nbsp;&nbsp;<span style="color: lightblue;">&lt;ul&gt;</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: lightblue;">&lt;li&gt;</span><span style="color: lightgreen;">&lt;a</span> <span style="color: orange;">href</span>=<span style="color: yellow;">"tabelle.html"</span>&gt;La mia prima tabella<span style="color: lightgreen;">&lt;/a&gt;</span><span style="color: lightblue;">&lt;/li&gt;</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<!-- Secondo elemento del menu che collega alla pagina delle liste ordinate -->
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: lightblue;">&lt;li&gt;</span><span style="color: lightgreen;">&lt;a</span> <span style="color: orange;">href</span>=<span style="color: yellow;">"ord.html"</span>&gt;Liste Ordinate<span style="color: lightgreen;">&lt;/a&gt;</span><span style="color: lightblue;">&lt;/li&gt;</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<!-- Terzo elemento del menu che collega alla pagina delle liste di definizione -->
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: lightblue;">&lt;li&gt;</span><span style="color: lightgreen;">&lt;a</span> <span style="color: orange;">href</span>=<span style="color: yellow;">"def.html"</span>&gt;Definizione<span style="color: lightgreen;">&lt;/a&gt;</span><span style="color: lightblue;">&lt;/li&gt;</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<!-- Quarto elemento del menu che collega alla pagina delle liste non ordinate -->
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: lightblue;">&lt;li&gt;</span><span style="color: lightgreen;">&lt;a</span> <span style="color: orange;">href</span>=<span style="color: yellow;">"unord.html"</span>&gt;Non definita<span style="color: lightgreen;">&lt;/a&gt;</span><span style="color: lightblue;">&lt;/li&gt;</span><br>
+                    &nbsp;&nbsp;<span style="color: lightblue;">&lt;/ul&gt;</span><br>
+                <span style="color: lightblue;">&lt;/nav&gt;</span><br>
+                <span class="comment">Per implementare i menù è necessario creare più pagine e sostituire le href con il nome delle proprie pagine PS: i file devono trovarsi nella stessa cartella</span>
+            </code>
+            
         </section>
     
         <section class="code-section">
             <h2 style="font-size: 40px;">Stile CSS Utilizzato</h2>
             <p>Di seguito è riportato un esempio di codice CSS con commenti:</p>
             <code>
-                <span style="color: lightblue;">body</span>, <span style="color: lightblue;">html</span> {<br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">background-color</span>: antiquewhite; <span style="color: green;">/* Sfondo della pagina */</span><br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">font-family</span>: Arial, Helvetica, sans-serif; <span style="color: green;">/* Font principale */</span><br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">scroll-behavior</span>: smooth; <span style="color: green;">/* Scorrimento fluido */</span><br>
+                <!-- Stile per la tabella -->
+                <span style="color: lightblue;">table</span> {<br>
+                    &nbsp;&nbsp;<span style="color: lightblue;">border-collapse</span>: collapse; <span style="color: green;">/* Rimuove lo spazio tra le celle della tabella */</span><br>
                 }<br><br>
-                
-                <span style="color: lightblue;">.section-container</span> { <span style="color: green;">/* Stile per il primo contenitore di sezioni */</span><br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">display</span>: flex;<br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">padding</span>: 20px;<br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">gap</span>: 20px;<br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">background-color</span>: aqua;<br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">font-size</span>: 30px;<br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">font-family</span>: 'Courier New', Courier, monospace;<br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">margin-top</span>: 200px;<br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">margin-bottom</span>: 20px;<br>
+            
+                <span style="color: lightblue;">table</span>, <span style="color: lightblue;">th</span>, <span style="color: lightblue;">td</span> {<br>
+                    &nbsp;&nbsp;<span style="color: lightblue;">border</span>: 1px solid; <span style="color: green;">/* Aggiunge un bordo alle celle */</span><br>
+                    &nbsp;&nbsp;<span style="color: lightblue;">border-color</span>: black; <span style="color: green;">/* Colore del bordo nero */</span><br>
                 }<br><br>
-                
-                <span style="color: lightblue;">.section-container2</span> { <span style="color: green;">/* Stile per il secondo contenitore di sezioni */</span><br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">display</span>: flex;<br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">padding</span>: 20px;<br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">gap</span>: 20px;<br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">background-color</span>: aqua;<br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">font-size</span>: 30px;<br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">font-family</span>: 'Courier New', Courier, monospace;<br>
+            
+                <span style="color: lightblue;">caption</span> {<br>
+                    &nbsp;&nbsp;<span style="color: lightblue;">font-weight</span>: bold; <span style="color: green;">/* Rende il testo del titolo della tabella in grassetto */</span><br>
                 }<br><br>
-                
-                <span style="color: lightblue;">.sezioni_affiancate</span> { <span style="color: green;">/* Stile per le sezioni affiancate */</span><br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">background-color</span>: gray;<br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">padding</span>: 20px;<br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">width</span>: 600px;<br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">text-align</span>: center;<br>
+            
+                <span style="color: lightblue;">thead</span> {<br>
+                    &nbsp;&nbsp;<span style="color: lightblue;">color</span>: green; <span style="color: green;">/* Colore del testo per l'intestazione della tabella */</span><br>
                 }<br><br>
-                
-                <span style="color: lightblue;">.sezioni_divise</span> { <span style="color: green;">/* Stile per le sezioni divise */</span><br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">flex</span>: 1;<br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">background-color</span>: gray;<br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">padding</span>: 20px;<br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">padding-inline</span>: 600px;<br>
-                    &nbsp;&nbsp;<span style="color: lightblue;">text-align</span>: center;<br>
+            
+                <!-- Stile per il menu di navigazione -->
+                <span style="color: lightblue;">.menu</span> {<br>
+                    &nbsp;&nbsp;<span style="color: lightblue;">position</span>: absolute; <span style="color: green;">/* Posiziona il menu in un punto specifico della pagina */</span><br>
+                    &nbsp;&nbsp;<span style="color: lightblue;">top</span>: 10px; <span style="color: green;">/* Distanza dal margine superiore */</span><br>
+                    &nbsp;&nbsp;<span style="color: lightblue;">right</span>: 10px; <span style="color: green;">/* Distanza dal margine destro */</span><br>
+                }<br><br>
+            
+                <span style="color: lightblue;">.menu ul</span> {<br>
+                    &nbsp;&nbsp;<span style="color: lightblue;">list-style</span>: none; <span style="color: green;">/* Rimuove i marker predefiniti delle liste */</span><br>
+                    &nbsp;&nbsp;<span style="color: lightblue;">display</span>: flex; <span style="color: green;">/* Dispone le voci del menu in orizzontale */</span><br>
+                    &nbsp;&nbsp;<span style="color: lightblue;">gap</span>: 15px; <span style="color: green;">/* Spaziatura tra le voci del menu */</span><br>
+                }<br><br>
+            
+                <span style="color: lightblue;">.menu a</span> {<br>
+                    &nbsp;&nbsp;<span style="color: lightblue;">text-decoration</span>: none; <span style="color: green;">/* Rimuove la sottolineatura dai link */</span><br>
+                    &nbsp;&nbsp;<span style="color: lightblue;">color</span>: #333; <span style="color: green;">/* Colore del testo dei link */</span><br>
+                    &nbsp;&nbsp;<span style="color: lightblue;">font-weight</span>: bold; <span style="color: green;">/* Rende il testo in grassetto */</span><br>
+                    &nbsp;&nbsp;<span style="color: lightblue;">transition</span>: color 0.3s ease; <span style="color: green;">/* Effetto di transizione per il colore al passaggio del mouse */</span><br>
+                }<br><br>
+            
+                <span style="color: lightblue;">.menu a:hover</span> {<br>
+                    &nbsp;&nbsp;<span style="color: lightblue;">color</span>: #007BFF; <span style="color: green;">/* Cambia il colore dei link al passaggio del mouse */</span><br>
                 }<br>
-            </code>            
+            </code>
+            
         </section>
         </div>
         </div>
@@ -276,14 +289,14 @@
         <div class="section-container">
             <div class="section">
         <h2>Vai alla lezione precedente</h2>
-        <p><a href="Lezione3j.html">Layout di Base con CSS e liste 🏗📐</a></p>
+        <p><a href="Lezione4j.html">Approfondimento sections e collegamenti 🔗📚</a></p>
     </div>
     <div class="section">
         <h2>Continua alla prossima lezione</h2>
-        <p><a href="Lezione5j.html">Tabelle 📊📈 Forms e input 📝🔧
+        <p><a href="Lezione6j.html">Forms 📝, GitHub 🤖 e creazione di un sito web completo 💻👨‍💻
     </div>
         </div>
-    <h2>Torna alla <a href="LaProgrammazioneDeiSogni.html">Home Page</a></h2>
+    <h2><a href="LaProgrammazioneDeiSogni.html">Torna alla Home Page</a></h2>
         <div style="text-align: center;">
             <img src="ciafrei-corsani.png" alt="Ciafrei e Corsani" style="width: 200px; height: auto;">
         </div>

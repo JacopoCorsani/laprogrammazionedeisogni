@@ -125,4 +125,20 @@ h2 {
 
 .comment {
     color: green; /* Colore per i commenti */
+    font-style: italic;
+}
+.tag {
+    color: #6ea7fd; /* Colore blu per i tag HTML */
+}
+
+.attribute {
+    color: #00c8ff; /* Colore azzurro per gli attributi */
+}
+
+.value {
+    color: #a3be8c; /* Colore verde per i valori degli attributi */
+}
+
+.text {
+    color: #d8dee9; /* Colore bianco sporco per il contenuto testuale */
 }
