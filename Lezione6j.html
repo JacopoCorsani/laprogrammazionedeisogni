@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="LaProgrammazioneDeiSogni.css">
+    <title>Lezione 6: Forms 📝, GitHub 🤖 e creazione di un sito web completo 💻👨‍💻</title>
+</head>
+<body>
+
+    <header>
+        <h1>Lezione 6</h1>
+        <p class="sottotitolo">Forms 📝, GitHub 🤖 e creazione di un sito web completo 💻👨‍💻</p>
+    </header>
+
+    <main>
+        <div class="section-container">
+        <div class="section" style="width: 100%;">
+            <h2 style="font-size: 40px;">Argomenti della lezione</h2>
+            <ul style="font-size: 16px; text-align: justify;">
+                <li>Introduzione ai forms 📝</li>
+                <li>Costruzione di un form 🏗️</li>
+                <li>Radio button e Checkbox 🔘☑️</li>
+                <li>GitHub 🤖</li>
+            </ul>
+            <h3 style="text-align: left;">Link e riferimenti utili:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Argomento</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Forms, Radio button e Checkboxes 🏗️</td>
+                        <td><a href="https://www.w3schools.com/html/html_forms.asp" target="_blank">Forms, Radio button e Checkboxes - W3schools</a></td>
+                    </tr>
+                    <tr>
+                        <td>Radio button, Checkbox e select 🔘☑️</td>
+                        <td><a href="https://www.html.it/pag/16074/consentire-delle-scelte-checkbox-radio-select/#:~:text=Menu%20di%20opzioni%20(HTML%20select)&text=Utilizzando%20il%20tasto%20CTRL%20l,la%20barra%20di%20scorrimento%20verticale." target="_blank">Radio button, Checkbox e select - HTML.it</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="section" style="width: 100%;">
+    <h1>Sezione con Esempio di Codice usato a lezione</h1>
+    <section class="code-section">
+        <h2 style="font-size: 40px;">HTML</h2>
+        <p>Di seguito è riportato un esempio di codice HTML con commenti:</p>
+            <h2>Codice HTML Completo</h2>
+            <code>
+                &lt;!DOCTYPE html&gt; <span class="comment">&lt;!-- Questo specifica che il documento utilizza HTML5 --&gt;</span><br>
+                &lt;<span class="tag">html</span> <span class="attribute">lang</span>=<span class="value">"it"</span>&gt; <span class="comment">&lt;!-- Imposta la lingua del documento su italiano --&gt;</span><br>
+                &nbsp;&nbsp;&lt;<span class="tag">head</span>&gt; <span class="comment">&lt;!-- Contiene i metadati e lo stile della pagina --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt; <span class="comment">&lt;!-- Imposta la codifica dei caratteri per supportare caratteri speciali --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">title</span>&gt;<span class="text">Forms</span>&lt;/<span class="tag">title</span>&gt; <span class="comment">&lt;!-- Titolo che appare nella scheda del browser --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">style</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* Stile per il modulo: definisce l'aspetto del form */</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">form</span> {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">max-width</span>: <span class="value">400px</span>; <span class="comment">/* Larghezza massima del modulo */</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">margin</span>: <span class="value">20px auto</span>; <span class="comment">/* Centro il modulo con margini automatici */</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">padding</span>: <span class="value">20px</span>; <span class="comment">/* Spaziatura interna al modulo */</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">border</span>: <span class="value">1px solid #000</span>; <span class="comment">/* Bordo nero sottile intorno al modulo */</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">border-radius</span>: <span class="value">8px</span>; <span class="comment">/* Arrotonda gli angoli del modulo */</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">background-color</span>: <span class="value">aquamarine</span>; <span class="comment">/* Colore di sfondo del modulo */</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">label</span> {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">font-weight</span>: <span class="value">bold</span>; <span class="comment">/* Rende il testo delle etichette in grassetto */</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">display</span>: <span class="value">block</span>; <span class="comment">/* Mostra ogni etichetta su una nuova riga */</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">margin-bottom</span>: <span class="value">5px</span>; <span class="comment">/* Spaziatura sotto le etichette */</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">input[type="text"]</span>, <span class="property">input[type="email"]</span>, <span class="property">input[type="password"]</span> {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">width</span>: <span class="value">100%</span>; <span class="comment">/* Imposta la larghezza dei campi di input al 100% */</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">margin-bottom</span>: <span class="value">10px</span>; <span class="comment">/* Spaziatura sotto i campi di input */</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">padding</span>: <span class="value">8px</span>; <span class="comment">/* Spaziatura interna dei campi di input */</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">border</span>: <span class="value">1px solid #000</span>; <span class="comment">/* Bordo nero per i campi di input */</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">border-radius</span>: <span class="value">4px</span>; <span class="comment">/* Arrotonda i bordi dei campi di input */</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">button</span> {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">background-color</span>: <span class="value">burlywood</span>; <span class="comment">/* Colore di sfondo del pulsante */</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">color</span>: <span class="value">white</span>; <span class="comment">/* Colore del testo del pulsante */</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">padding</span>: <span class="value">10px 20px</span>; <span class="comment">/* Spaziatura interna del pulsante */</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">border</span>: <span class="value">none</span>; <span class="comment">/* Rimuove il bordo del pulsante */</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">cursor</span>: <span class="value">pointer</span>; <span class="comment">/* Cambia il cursore al passaggio del mouse */</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">button:hover</span> {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">background-color</span>: <span class="value">blanchedalmond</span>; <span class="comment">/* Cambia il colore di sfondo al passaggio del mouse */</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="tag">style</span>&gt;<br>
+                &nbsp;&nbsp;&lt;/<span class="tag">head</span>&gt; <span class="comment">&lt;!-- Fine della sezione head --&gt;</span><br>
+                &nbsp;&nbsp;&lt;<span class="tag">body</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">form</span> <span class="attribute">action</span>=<span class="value">"url_destinazione"</span> <span class="attribute">method</span>=<span class="value">"post"</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">label</span> <span class="attribute">for</span>=<span class="value">"nome"</span>&gt;Nome:&lt;/<span class="tag">label</span>&gt; <span class="comment">&lt;!-- Etichetta per il campo nome --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">id</span>=<span class="value">"nome"</span> <span class="attribute">name</span>=<span class="value">"nome"</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">label</span> <span class="attribute">for</span>=<span class="value">"cognome"</span>&gt;Cognome:&lt;/<span class="tag">label</span>&gt; <span class="comment">&lt;!-- Etichetta per il campo cognome --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">id</span>=<span class="value">"cognome"</span> <span class="attribute">name</span>=<span class="value">"cognome"</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">label</span> <span class="attribute">for</span>=<span class="value">"email"</span>&gt;Email:&lt;/<span class="tag">label</span>&gt; <span class="comment">&lt;!-- Etichetta per il campo email --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">input</span> <span class="attribute">type</span>=<span class="value">"email"</span> <span class="attribute">id</span>=<span class="value">"email"</span> <span class="attribute">name</span>=<span class="value">"email"</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">label</span> <span class="attribute">for</span>=<span class="value">"password"</span>&gt;Password:&lt;/<span class="tag">label</span>&gt; <span class="comment">&lt;!-- Etichetta per il campo password --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"password"</span> <span class="attribute">name</span>=<span class="value">"password"</span>&gt;<br>
+                
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">p</span>&gt;Seleziona il tuo genere:&lt;/<span class="tag">p</span>&gt; <span class="comment">&lt;!-- Sezione per i radio button del genere --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">id</span>=<span class="value">"maschio"</span> <span class="attribute">name</span>=<span class="value">"genere"</span> <span class="attribute">value</span>=<span class="value">"maschio"</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">label</span> <span class="attribute">for</span>=<span class="value">"maschio"</span>&gt;Maschio&lt;/<span class="tag">label</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">id</span>=<span class="value">"femmina"</span> <span class="attribute">name</span>=<span class="value">"genere"</span> <span class="attribute">value</span>=<span class="value">"femmina"</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">label</span> <span class="attribute">for</span>=<span class="value">"femmina"</span>&gt;Femmina&lt;/<span class="tag">label</span>&gt;<br>
+               
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">p</span>&gt;Seleziona i tuoi interessi:&lt;/<span class="tag">p</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">id</span>=<span class="value">"sport"</span> <span class="attribute">name</span>=<span class="value">"interesse"</span> <span class="attribute">value</span>=<span class="value">"sport"</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">label</span> <span class="attribute">for</span>=<span class="value">"sport"</span>&gt;Sport&lt;/<span class="tag">label</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">id</span>=<span class="value">"musica"</span> <span class="attribute">name</span>=<span class="value">"interesse"</span> <span class="attribute">value</span>=<span class="value">"musica"</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">label</span> <span class="attribute">for</span>=<span class="value">"musica"</span>&gt;Musica&lt;/<span class="tag">label</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">id</span>=<span class="value">"soldi"</span> <span class="attribute">name</span>=<span class="value">"interesse"</span> <span class="attribute">value</span>=<span class="value">"soldi"</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">label</span> <span class="attribute">for</span>=<span class="value">"soldi"</span>&gt;Soldi&lt;/<span class="tag">label</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">label</span> <span class="attribute">for</span>=<span class="value">"lingua"</span>&gt;Lingua preferita:&lt;/<span class="tag">label</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">select</span> <span class="attribute">id</span>=<span class="value">"lingua"</span> <span class="attribute">name</span>=<span class="value">"lingua"</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">option</span> <span class="attribute">value</span>=<span class="value">"italiano"</span>&gt
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">option</span> <span class="attribute">value</span>=<span class="value">"inglese"</span>&gt;Inglese&lt;/<span class="tag">option</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">option</span> <span class="attribute">value</span>=<span class="value">"spagnolo"</span>&gt;Spagnolo&lt;/<span class="tag">option</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">option</span> <span class="attribute">value</span>=<span class="value">"tedesco"</span>&gt;Tedesco&lt;/<span class="tag">option</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">option</span> <span class="attribute">value</span>=<span class="value">"arabo"</span>&gt;Arabo&lt;/<span class="tag">option</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="tag">select</span>&gt;<br><br>
+            
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">button</span> <span class="attribute">type</span>=<span class="value">"submit"</span>&gt;Invia&lt;/<span class="tag">button</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="tag">form</span>&gt;<br>
+                &nbsp;&nbsp;&lt;/<span class="tag">body</span>&gt;<br>
+                &lt;/<span class="tag">html</span>&gt;
+            </code>
+        </section>
+        <p>Ciò che è stato spiegato sopra è rappresentato da <a href="esempioforms.html" target="_blank">questo</a></p>
+    </section>
+</body>
+
+
+</main>
+    <!-- Link di navigazione -->
+    <section class="footer">
+        <div class="section-container">
+            <div class="section">
+        <h2>Vai alla lezione precedente</h2>
+        <p><a href="Lezione4j.html">Approfondimento sections e collegamenti 🔗📚</a></p>
+    </div>
+    <div class="section">
+        <h2>Continua alla prossima lezione</h2>
+        <p><a href="Lezione6j.html">Forms 📝, GitHub 🤖 e creazione di un sito web completo 💻👨‍💻
+    </div>
+        </div>
+    <h2><a href="LaProgrammazioneDeiSogni.html">Torna alla Home Page</a></h2>
+        <div style="text-align: center;">
+            <img src="ciafrei-corsani.png" alt="Ciafrei e Corsani" style="width: 200px; height: auto;">
+        </div>
+    </section>
+
+    </body>
+</html>

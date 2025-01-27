@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <h1 title="Scritta">Forms</h1>
+    <title>Forms</title>
+
+    <style>
+        form {
+            max-width: 400px;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #000;
+            border-radius: 8px;
+            background-color: aquamarine;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: auto;
+            margin-bottom: 10px;
+            border: 1px solid #000;
+            border-radius: 4px;
+        }
+
+        input[type="radio"], input[type="checkbox"]{
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: burlywood;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: blanchedalmond;
+        }
+    </style>
+
+
+</head>
+
+<body>
+<form action="url_destinazione" method="post">
+    <!--Campi nome e cognome-->
+<label for="nome">Nome: </label>
+<input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome">
+
+<label for="cognome">Cognome: </label>
+<input type="text" id="cognome" name="cognome" placeholder="Inserisci il tuo cognome">
+
+<!--Campi email e password-->
+<label for="email">E-mail: </label>
+<input type="email" id="email" name="email" placeholder="Inserisci la tua E-mail" required>
+
+<label for="password">Password: </label>
+<input type="password" id="password" name="password" placeholder="Inserisci la password" required>
+
+<!--Radio button-->
+<p>Seleziona il tuo genere</p>
+<input type="radio" id="maschio" name="genere" value="maschio">
+<label for="maschio">Maschio</label>
+<input type="radio" id="femmina" name="genere" value="femmina">
+<label for="femmina">Femmina</label>
+
+<!--Checkbox-->
+<p>Seleziona i tuoi interessi</p>
+<input type="checkbox" id="sport" name="interesse" value="sport">
+<label for="sport">Sport</label>
+<input type="checkbox" id="musica" name="interesse" value="musica">
+<label for="musica">Musica</label>
+<input type="checkbox" id="soldi" name="interesse" value="soldi">
+<label for="soldi">Soldi</label>
+
+<!--Menù di scelta-->
+<label for="lingua">Seleziona la tua lingua preferita</label>
+<select id="lingua" name="lingua">
+    <option value="Italiano">Italiano</option>
+    <option value="spagnolo">Spagnolo</option>
+    <option value="inglese">Inglese</option>
+    <option value="tedesco">Tedesco</option>
+    <option value="arabo">Arabo</option>
+</select>
+
+<button type="submit">Invia</button>
+</form>
+
+</body>
+</html>
