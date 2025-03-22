@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esempi Avanzati JavaScript</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    button {
+      margin: 10px 0;
+      padding: 10px;
+    }
+    #box {
+      width: 100px;
+      height: 100px;
+      background: tomato;
+      transition: transform 0.3s ease;
+      margin-top: 20px;
+      position: absolute;
+      left: 0;
+      top: 400px;
+      cursor: grab;
+    }
+  </style>
+</head>
+<body>
+  <h1>Esempi Avanzati con JavaScript</h1>
+
+  <!-- 1. LocalStorage - contatore like persistente -->
+  <h2>1. Like con salvataggio</h2>
+  <button onclick="likePersistente()">👍 Mi piace</button>
+  <p>Like salvati: <span id="like-salvati">0</span></p>
+
+  <!-- 2. Manipolazione DOM dinamica -->
+  <h2>2. Aggiunta dinamica a una lista</h2>
+  <button onclick="aggiungiElementoLista()">Aggiungi elemento</button>
+  <ul id="lista-dinamica"></ul>
+
+  <!-- 3. Eventi tastiera -->
+  <h2>3. Cambia colore con tastiera</h2>
+  <p>Premi la lettera "g" per sfondo verde o "r" per rosso.</p>
+
+  <!-- 4. Animazione bottone -->
+  <h2>4. Animazione semplice</h2>
+  <button onclick="muoviBox()">Muovi il box</button>
+  <div id="box"></div>
+
+  <!-- 5. Movimento libero -->
+  <h2>5. Muovi liberamente il box</h2>
+  <button onclick="muoviOggetto('sinistra')">←</button>
+  <button onclick="muoviOggetto('destra')">→</button>
+  <button onclick="muoviOggetto('su')">↑</button>
+  <button onclick="muoviOggetto('giu')">↓</button>
+
+  <!-- 6. Trascinamento con mouse -->
+  <h2>6. Trascina il box con il mouse</h2>
+  <p>Fai clic sul box e trascinalo con il mouse.</p>
+
+  <script>
+    let like = Number(localStorage.getItem("like")) || 0;
+    document.getElementById("like-salvati").textContent = like;
+
+    function likePersistente() {
+      like++;
+      document.getElementById("like-salvati").textContent = like;
+      localStorage.setItem("like", like);
+    }
+
+    function aggiungiElementoLista() {
+      const testo = prompt("Scrivi un elemento:");
+      const li = document.createElement("li");
+      li.textContent = testo;
+      document.getElementById("lista-dinamica").appendChild(li);
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "g") {
+        document.body.style.backgroundColor = "lightgreen";
+      } else if (e.key === "r") {
+        document.body.style.backgroundColor = "lightcoral";
+      }
+    });
+
+    let distanza = 0;
+    function muoviBox() {
+      distanza += 20;
+      document.getElementById("box").style.transform = `translateX(${distanza}px)`;
+    }
+
+    let posX = 0;
+    let posY = 400;
+    function muoviOggetto(direzione) {
+      const box = document.getElementById("box");
+      const passo = 20;
+      if (direzione === "sinistra") posX -= passo;
+      if (direzione === "destra") posX += passo;
+      if (direzione === "su") posY -= passo;
+      if (direzione === "giu") posY += passo;
+      box.style.left = posX + "px";
+      box.style.top = posY + "px";
+    }
+
+    // 6. Trascinamento con mouse
+    const box = document.getElementById("box");
+    let isDragging = false;
+    let offsetX, offsetY;
+
+    box.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      offsetX = e.clientX - box.offsetLeft;
+      offsetY = e.clientY - box.offsetTop;
+      box.style.cursor = "grabbing";
+    });
+
+    document.addEventListener("mousemove", (e) => {
+      if (isDragging) {
+        posX = e.clientX - offsetX;
+        posY = e.clientY - offsetY;
+        box.style.left = posX + "px";
+        box.style.top = posY + "px";
+      }
+    });
+
+    document.addEventListener("mouseup", () => {
+      isDragging = false;
+      box.style.cursor = "grab";
+    });
+  </script>
+</body>
+</html>

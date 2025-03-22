@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript nella vita reale</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .scuro {
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+        .like-btn {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .like-btn:hover {
+            background: #0056b3;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            }
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 300px;
+            text-align: center;
+            }
+        .modal.show {
+            display: flex;
+            }
+    </style>
+</head>
+<body>
+    <h1>JavaScript nella vita reale</h1>
+
+    <!-- 1. Validazione Form -->
+    <h2>1. Form con validazione</h2>
+    <form onsubmit="return validaForm()">
+        <label>Email: <input type="text" id="email"></label><br>
+        <label>Password: <input type="password" id="password"></label><br>
+        <button type="submit">Invia</button>
+        <p id="messaggio-form"></p>
+    </form>
+
+    <!-- 2. Tema chiaro/scuro -->
+    <h2>2. Tema chiaro / scuro</h2>
+    <button onclick="toggleTema()">Cambia tema</button>
+
+    <!-- 3. Contatore Like -->
+    <h2>3. Like button</h2>
+    <button class="like-btn" onclick="aumentaLike()">👍 Mi piace</button>
+    <p>Like: <span id="like-count">0</span></p>
+
+    <!-- 4. Countdown Timer -->
+    <h2>4. Countdown</h2>
+    <button onclick="avviaCountdown()">Avvia countdown da 10</button>
+    <p id="timer">10</p>
+
+    <!-- 5. Pop-up personalizzato -->
+    <h2>5. Pop-up</h2>
+    <button onclick="mostraPopup()">Mostra pop-up</button>
+
+    <!-- 6. Modale personalizzata -->
+  <h2>6. Modale</h2>
+  <button onclick="apriModale()">Apri Modale</button>
+  <div id="modale" class="modal" onclick="chiudiModale(event)">
+    <div class="modal-content">
+      <p>Questo è un pop-up personalizzato ✨</p>
+      <button onclick="document.getElementById('modale').classList.remove('show')">Chiudi</button>
+    </div>
+  </div>
+
+    <script>
+        // 1. Validazione form
+        function validaForm() {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const messaggio = document.getElementById("messaggio-form");
+
+            // Controlla se l'email contiene il carattere "@"
+            if (!email.includes("@")) {
+                messaggio.textContent = "Email non valida.";
+                return false;
+            }
+            // Controlla se la password è lunga almeno 8 caratteri
+            if (password.length < 8) {
+                messaggio.textContent = "La password deve avere almeno 8 caratteri.";
+                return false;
+            }
+
+            messaggio.textContent = "Form inviato correttamente!";
+            return false; // Evita il refresh per test
+        }
+
+        // 2. Tema chiaro/scuro
+        function toggleTema() {
+            // Alterna la classe "scuro" sul body per cambiare il tema
+            document.body.classList.toggle("scuro");
+        }
+
+        // 3. Contatore like
+        let like = 0;
+        function aumentaLike() {
+            // Incrementa il contatore dei like e aggiorna il testo
+            like++;
+            document.getElementById("like-count").textContent = like;
+        }
+
+        // 4. Countdown Timer
+        let timerID;
+        function avviaCountdown() {
+            let tempo = 10;
+            document.getElementById("timer").textContent = tempo;
+            clearInterval(timerID);
+
+            // Imposta un intervallo che decrementa il timer ogni secondo
+            timerID = setInterval(() => {
+                tempo--;
+                document.getElementById("timer").textContent = tempo;
+                if (tempo === 0) {
+                    clearInterval(timerID);
+                    alert("Tempo scaduto!");
+                }
+            }, 1000);
+        }
+
+        // 5. Pop-up personalizzato
+        function mostraPopup() {
+            // Chiede conferma all'utente
+            const conferma = confirm("Vuoi davvero vedere un messaggio segreto?");
+            if (conferma) {
+                // Chiede il nome dell'utente e mostra un messaggio personalizzato
+                const nome = prompt("Inserisci il tuo nome:");
+                alert("Ciao " + nome + ", questo è il tuo messaggio segreto 🎉");
+            } else {
+                alert("Hai annullato l'azione.");
+            }
+        }
+
+        // 6. Modale personalizzata
+    function apriModale() {
+      document.getElementById("modale").classList.add("show");
+    }
+
+    function chiudiModale(e) {
+      if (e.target.id === "modale") {
+        e.target.classList.remove("show");
+      }
+    }
+    </script>
+</body>
+</html>

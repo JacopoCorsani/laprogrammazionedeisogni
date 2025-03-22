@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizi JavaScript Intermedi</title>
+</head>
+<body>
+    <h1>Esercizi JavaScript Intermedi</h1>
+
+    <!-- Pulsanti esercizi -->
+    <button onclick="esercizio9()">9. Conta vocali</button>
+    <button onclick="esercizio10()">10. Parola palindroma</button>
+    <button onclick="esercizio11()">11. Generatore di password</button>
+    <button onclick="esercizio12()">12. Indovina il numero</button>
+    <button onclick="esercizio13()">13. Calcolo della media</button>
+    <button onclick="esercizio14()">14. Valori max/min</button>
+    <button onclick="esercizio15()">15. Lista della spesa</button>
+
+    <script>
+        // Funzione per contare le vocali in una frase
+        function esercizio9() {
+            let frase = prompt("Inserisci una frase:");
+            if (frase === null) return; // Esce dalla funzione se l'utente clicca su "annulla"
+            frase = frase.toLowerCase(); // Converte la frase in minuscolo
+            let vocali = "aeiou"; // Definisce le vocali
+            let contatore = 0; // Inizializza il contatore delle vocali
+            for (let i = 0; i < frase.length; i++) { // Cicla attraverso ogni carattere della frase
+                if (vocali.includes(frase[i])) contatore++; // Incrementa il contatore se il carattere è una vocale
+            }
+            alert("Numero di vocali: " + contatore); // Mostra il numero di vocali
+        }
+
+        // Funzione per verificare se una parola è palindroma
+        function esercizio10() {
+            let parola = prompt("Inserisci una parola:");
+            if (parola === null) return; // Esce dalla funzione se l'utente clicca su "annulla"
+            let invertita = parola.split("").reverse().join(""); // Inverte la parola
+            if (parola === invertita) { // Controlla se la parola è uguale alla sua versione invertita
+                alert("La parola è un palindromo."); // Mostra un messaggio se la parola è palindroma
+            } else {
+                alert("La parola NON è un palindromo."); // Mostra un messaggio se la parola non è palindroma
+            }
+        }
+
+        // Funzione per generare una password
+        function esercizio11() {
+            let nome = prompt("Nome:");
+            if (nome === null) return; // Esce dalla funzione se l'utente clicca su "annulla"
+            let cognome = prompt("Cognome:");
+            if (cognome === null) return; // Esce dalla funzione se l'utente clicca su "annulla"
+            let anno = prompt("Anno di nascita:");
+            if (anno === null) return; // Esce dalla funzione se l'utente clicca su "annulla"
+            let password = nome + cognome + "_" + anno + "!"; // Genera la password concatenando nome, cognome e anno
+            alert("Password generata: " + password); // Mostra la password generata
+        }
+
+        // Funzione per il gioco "Indovina il numero"
+        function esercizio12() {
+            let numeroCasuale = Math.floor(Math.random() * 10) + 1; // Genera un numero casuale tra 1 e 10
+            let tentativo;
+            do {
+                let input = prompt("Indovina il numero (1-10):"); // Chiede di indovinare il numero
+                if (input === null) {
+                    alert("Gioco annullato."); // Mostra un messaggio se l'utente clicca su "annulla"
+                    return; // Esce dalla funzione
+                }
+                tentativo = Number(input);
+                if (tentativo > numeroCasuale) alert("Troppo alto!"); // Mostra un messaggio se il tentativo è troppo alto
+                else if (tentativo < numeroCasuale) alert("Troppo basso!"); // Mostra un messaggio se il tentativo è troppo basso
+            } while (tentativo !== numeroCasuale); // Continua a chiedere finché il numero non è indovinato
+            alert("Bravo! Hai indovinato!"); // Mostra un messaggio di successo
+        }
+
+        // Funzione per calcolare la media di 5 numeri
+        function esercizio13() {
+            let numeri = [];
+            for (let i = 0; i < 5; i++) { // Chiede 5 numeri
+                let numero = prompt("Inserisci il numero " + (i+1) + ":");
+                if (numero === null) return; // Esce dalla funzione se l'utente clicca su "annulla"
+                numeri.push(Number(numero));
+            }
+            let somma = 0;
+            for (let num of numeri) { // Calcola la somma dei numeri
+                somma += num;
+            }
+            let media = somma / numeri.length; // Calcola la media
+            alert("La media è: " + media); // Mostra la media
+        }
+
+        // Funzione per trovare il valore massimo e minimo in una lista di numeri
+        function esercizio14() {
+            let input = prompt("Inserisci numeri separati da virgola (es: 3,5,1,9):"); // Chiede una lista di numeri separati da virgola
+            if (input === null) return; // Esce dalla funzione se l'utente clicca su "annulla"
+            let numeri = input.split(",").map(Number); // Converte la lista in un array di numeri
+            let max = Math.max(...numeri); // Trova il valore massimo
+            let min = Math.min(...numeri); // Trova il valore minimo
+            alert("Massimo: " + max + " | Minimo: " + min); // Mostra i valori massimo e minimo
+        }
+
+        // Funzione per creare una lista della spesa
+        function esercizio15() {
+            let lista = [];
+            let elemento;
+            while (true) {
+                elemento = prompt("Aggiungi un elemento alla lista (scrivi 'fine' per terminare):"); // Chiede un elemento da aggiungere alla lista
+                if (elemento === null || elemento.toLowerCase() === "fine") break; // Termina se l'utente scrive "fine" o clicca su "annulla"
+                lista.push(elemento); // Aggiunge l'elemento alla lista
+            }
+            alert("Lista della spesa:\n" + lista.join("\n")); // Mostra la lista della spesa
+        }
+    </script>
+</body>
+</html>

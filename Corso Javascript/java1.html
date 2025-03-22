@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esercizi Base JavaScript con Pulsanti</title>
+</head>
+<body>
+  <h1>Esercizi Base JavaScript</h1>
+
+  <button onclick="esercizio1()">1. Messaggio di benvenuto</button>
+  <button onclick="esercizio2()">2. Il tuo nome</button>
+  <button onclick="esercizio3()">3. Somma di due numeri</button>
+  <button onclick="esercizio4()">4. Verifica maggiorenne</button>
+  <button onclick="esercizio5()">5. Ciclo da 1 a 10</button>
+  <button onclick="esercizio6()">6. Pari o dispari</button>
+  <button onclick="esercizio7()">7. Funzione saluto()</button>
+  <button onclick="esercizio8()">8. Calcolatrice base</button>
+
+  <script>
+    function esercizio1() {
+      alert("Benvenuto nel mondo di JavaScript!");
+    }
+
+    function esercizio2() {
+      let nome = prompt("Come ti chiami?");
+      alert("Ciao, " + nome + "!");
+    }
+
+    function esercizio3() {
+      let num1 = prompt("Inserisci il primo numero:");
+      let num2 = prompt("Inserisci il secondo numero:");
+      let somma = Number(num1) + Number(num2);
+      alert("La somma è " + somma);
+    }
+
+    function esercizio4() {
+      let eta = prompt("Quanti anni hai?");
+      if (eta >= 18) {
+        alert("Sei maggiorenne.");
+      } else {
+        alert("Sei minorenne.");
+      }
+    }
+
+    function esercizio5() {
+      for (let i = 1; i <= 10; i++) {
+        alert(i);
+      }
+    }
+
+    function esercizio6() {
+      let numero = prompt("Inserisci un numero:");
+      if (numero % 2 === 0) {
+        alert("È pari.");
+      } else {
+        alert("È dispari.");
+      }
+    }
+
+    function esercizio7() {
+      function saluto() {
+        let nome = prompt("Come ti chiami?");
+        alert("Benvenuto, " + nome + "!");
+      }
+      saluto();
+    }
+
+    function esercizio8() {
+      let n1 = Number(prompt("Primo numero:"));
+      let n2 = Number(prompt("Secondo numero:"));
+      let operazione = prompt("Scegli un'operazione (+, -, *, /)");
+
+      let risultato;
+      if (operazione === "+") {
+        risultato = n1 + n2;
+      } else if (operazione === "-") {
+        risultato = n1 - n2;
+      } else if (operazione === "*") {
+        risultato = n1 * n2;
+      } else if (operazione === "/") {
+        risultato = n1 / n2;
+      } else {
+        risultato = "Operazione non valida";
+      }
+
+      alert("Risultato: " + risultato);
+    }
+  </script>
+</body>
+</html>
