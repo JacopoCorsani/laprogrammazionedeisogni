@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Pong in JavaScript</title>
+  <style>
+    canvas {
+      background: #000;
+      display: block;
+      margin: 30px auto;
+      border: 3px solid white;
+    }
+    body {
+      color: white;
+      text-align: center;
+      background: #111;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pong - JavaScript Edition</h1>
+  <canvas id="pong" width="1000" height="600"></canvas>
+
+  <script>
+    const canvas = document.getElementById("pong");
+    const ctx = canvas.getContext("2d");
+
+    // Racchette
+    const paddleWidth = 10, paddleHeight = 100;
+    const leftPaddle = { x: 0, y: canvas.height / 2 - paddleHeight / 2, score: 0 };
+    const rightPaddle = { x: canvas.width - paddleWidth, y: canvas.height / 2 - paddleHeight / 2, score: 0 };
+
+    // Pallina
+    const ball = {
+      x: canvas.width / 2,
+      y: canvas.height / 2,
+      radius: 7,
+      speed: 5,
+      dx: 5,
+      dy: 5
+    };
+
+    // Disegna rettangolo
+    function drawRect(x, y, w, h, color) {
+      ctx.fillStyle = color;
+      ctx.fillRect(x, y, w, h);
+    }
+
+    // Disegna cerchio
+    function drawCircle(x, y, r, color) {
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.arc(x, y, r, 0, Math.PI * 2);
+      ctx.closePath();
+      ctx.fill();
+    }
+
+    // Disegna testo
+    function drawText(text, x, y) {
+      ctx.fillStyle = "white";
+      ctx.font = "30px monospace";
+      ctx.fillText(text, x, y);
+    }
+
+    // Movimento racchette
+    const keys = {};
+    document.addEventListener("keydown", e => keys[e.key] = true);
+    document.addEventListener("keyup", e => keys[e.key] = false);
+
+    function movePaddles() {
+      // Giocatore sinistra (W/S)
+      if (keys["w"] && leftPaddle.y > 0) leftPaddle.y -= 7;
+      if (keys["s"] && leftPaddle.y < canvas.height - paddleHeight) leftPaddle.y += 7;
+
+      // Giocatore destra (↑/↓)
+      if (keys["ArrowUp"] && rightPaddle.y > 0) rightPaddle.y -= 7;
+      if (keys["ArrowDown"] && rightPaddle.y < canvas.height - paddleHeight) rightPaddle.y += 7;
+    }
+
+    // Collisione palla con racchette
+    function collision(paddle) {
+      return (
+        ball.x < paddle.x + paddleWidth &&
+        ball.x > paddle.x &&
+        ball.y < paddle.y + paddleHeight &&
+        ball.y > paddle.y
+      );
+    }
+
+    // Reset palla
+    function resetBall() {
+      ball.x = canvas.width / 2;
+      ball.y = canvas.height / 2;
+      ball.dx = -ball.dx;
+      ball.dy = 5 * (Math.random() > 0.5 ? 1 : -1);
+    }
+
+    // Update
+    function update() {
+      movePaddles();
+
+      ball.x += ball.dx;
+      ball.y += ball.dy;
+
+      // Bordo superiore e inferiore
+      if (ball.y + ball.radius > canvas.height || ball.y - ball.radius < 0) {
+        ball.dy = -ball.dy;
+      }
+
+      // Collisione con racchette
+      const player = ball.x < canvas.width / 2 ? leftPaddle : rightPaddle;
+      if (collision(player)) {
+        ball.dx = -ball.dx;
+      }
+
+      // Punto
+      if (ball.x + ball.radius < 0) {
+        rightPaddle.score++;
+        resetBall();
+      } else if (ball.x - ball.radius > canvas.width) {
+        leftPaddle.score++;
+        resetBall();
+      }
+    }
+
+    // Render
+    function render() {
+      drawRect(0, 0, canvas.width, canvas.height, "black");
+
+      drawText(leftPaddle.score, canvas.width / 4, 40);
+      drawText(rightPaddle.score, 3 * canvas.width / 4, 40);
+
+      drawRect(leftPaddle.x, leftPaddle.y, paddleWidth, paddleHeight, "white");
+      drawRect(rightPaddle.x, rightPaddle.y, paddleWidth, paddleHeight, "white");
+
+      drawCircle(ball.x, ball.y, ball.radius, "white");
+    }
+
+    // Game loop
+    function game() {
+      update();
+      render();
+    }
+    setInterval(game, 1000 / 60); // 60 FPS
+  </script>
+</body>
+</html>
