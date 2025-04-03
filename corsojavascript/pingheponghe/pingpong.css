@@ -1,0 +1,62 @@
+/* Rimuove margini e centra il canvas */
+body {
+    margin: 0;
+    background-color: darkgray; /* Sfondo della pagina */
+    display: flex; /* Per centrare il canvas */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altezza pari a tutta la finestra */
+  }
+
+  h1 {
+    color: black; /* Colore del titolo */ 
+    justify-content: flex-start;   
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra il titolo e il canvas */
+  }
+  /* Stile del campo da gioco */
+  canvas {
+    background-color: lightsteelblue; /* Sfondo del gioco */
+    border: 2px solid black; /* Bordo nero intorno al campo */
+  }
+  #score {
+    font-size: 24px;
+    color: black;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  #score span {
+    font-weight: bold;
+    margin: 0 10px;
+  }
+  
+  
+  #gameCanvas {
+    background-color: #ffffff; /* Sfondo del canvas */
+    border: 1px solid #000000; /* Bordo del canvas */
+    display: block; /* Per centrare il canvas */
+    margin: 0 auto; /* Margine automatico per centrare */
+    position: relative; /* Per posizionare gli oggetti all'interno */
+  }
+  button {
+    background-color: #4CAF50; /* Colore verde del pulsante */
+    border: none; /* Nessun bordo */
+    color: white; /* Colore del testo */
+    padding: 10px 20px; /* Padding del pulsante */
+    text-align: center; /* Testo centrato */
+    text-decoration: none; /* Nessuna decorazione del testo */
+    display: inline-block; /* Per il layout del pulsante */
+    font-size: 16px; /* Dimensione del testo */
+    margin-top: 20px; /* Spazio sopra il pulsante */
+    cursor: pointer; /* Cambia il cursore quando si passa sopra */
+  }
+  button:hover {
+    background-color: #45a049; /* Colore del pulsante al passaggio del mouse */
+  }
+  button:active {
+    background-color: #3e8e41; /* Colore del pulsante quando viene premuto */
+  }
