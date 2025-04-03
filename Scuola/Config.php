@@ -1,13 +1,12 @@
-CREATE DATABASE scuola_db;
+<?php
+$servername = "localhost";
+$dbuser = "root";
+$dbpass = "";
+$dbname = "scuola_db";
 
-USE scuola_db;
+$conn = new mysqli($servername, $dbuser, $dbpass, $dbname);
 
-CREATE TABLE utenti (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  nome VARCHAR(100) NOT NULL,
-  cognome VARCHAR(100) NOT NULL,
-  email VARCHAR(100) UNIQUE NOT NULL,
-  password VARCHAR(255) NOT NULL,
-  ruolo ENUM('studente', 'professore') NOT NULL,
-  creato_il TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+if ($conn->connect_error) {
+    die("Errore di connessione: " . $conn->connect_error);
+}
+?>
